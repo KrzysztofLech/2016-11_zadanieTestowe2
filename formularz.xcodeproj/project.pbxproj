@@ -13,6 +13,8 @@
 		CF82BD251DD1A7A800F6F720 /* formularz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD231DD1A7A800F6F720 /* formularz.xcdatamodeld */; };
 		CF82BD271DD1A7A800F6F720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF82BD261DD1A7A800F6F720 /* Assets.xcassets */; };
 		CF82BD2A1DD1A7A800F6F720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF82BD281DD1A7A800F6F720 /* LaunchScreen.storyboard */; };
+		CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD331DD1AAED00F6F720 /* FirstVC.swift */; };
+		CF82BD361DD1AB7400F6F720 /* FormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD351DD1AB7400F6F720 /* FormVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CF82BD261DD1A7A800F6F720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF82BD291DD1A7A800F6F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF82BD2B1DD1A7A800F6F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF82BD331DD1AAED00F6F720 /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		CF82BD351DD1AB7400F6F720 /* FormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		CF82BD1B1DD1A7A800F6F720 /* formularz */ = {
 			isa = PBXGroup;
 			children = (
-				CF82BD1C1DD1A7A800F6F720 /* AppDelegate.swift */,
-				CF82BD1E1DD1A7A800F6F720 /* ViewController.swift */,
 				CF82BD201DD1A7A800F6F720 /* Main.storyboard */,
+				CF82BD331DD1AAED00F6F720 /* FirstVC.swift */,
+				CF82BD351DD1AB7400F6F720 /* FormVC.swift */,
+				CF82BD1E1DD1A7A800F6F720 /* ViewController.swift */,
+				CF82BD321DD1AA9C00F6F720 /* classes */,
+				CF82BD311DD1AA1700F6F720 /* Other */,
+			);
+			path = formularz;
+			sourceTree = "<group>";
+		};
+		CF82BD311DD1AA1700F6F720 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CF82BD231DD1A7A800F6F720 /* formularz.xcdatamodeld */,
+				CF82BD1C1DD1A7A800F6F720 /* AppDelegate.swift */,
 				CF82BD261DD1A7A800F6F720 /* Assets.xcassets */,
 				CF82BD281DD1A7A800F6F720 /* LaunchScreen.storyboard */,
 				CF82BD2B1DD1A7A800F6F720 /* Info.plist */,
-				CF82BD231DD1A7A800F6F720 /* formularz.xcdatamodeld */,
 			);
-			path = formularz;
+			name = Other;
+			sourceTree = "<group>";
+		};
+		CF82BD321DD1AA9C00F6F720 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF82BD361DD1AB7400F6F720 /* FormVC.swift in Sources */,
 				CF82BD1F1DD1A7A800F6F720 /* ViewController.swift in Sources */,
+				CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */,
 				CF82BD251DD1A7A800F6F720 /* formularz.xcdatamodeld in Sources */,
 				CF82BD1D1DD1A7A800F6F720 /* AppDelegate.swift in Sources */,
 			);
@@ -267,7 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = formularz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.czanygrom.formularz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				INFOPLIST_FILE = formularz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.czanygrom.formularz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
