@@ -13,7 +13,7 @@ protocol PersonDataSelectionDelegate {
 }
 
 
-class FormVC: UIViewController {
+class FormVC: UIViewController, DatePickerDelegate {
     
 
     // MARK:- Outlets
@@ -61,6 +61,14 @@ class FormVC: UIViewController {
         }
     }
     
+    var dataLabel: String = "" {
+        didSet {
+            dataSpotkaniaTextField.text = dataLabel
+            dataSpotkaniaTextField.textColor = UIColor.black
+        }
+    }
+    
+    
     var delegate: PersonDataSelectionDelegate! = nil
     
     
@@ -72,8 +80,6 @@ class FormVC: UIViewController {
     /*
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }*/
     
     
@@ -105,6 +111,17 @@ class FormVC: UIViewController {
     }
     
     
+    // MARK:- Segue Method
+    /// -----------------------------------------------------------------------------------
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DatePickerSegue" {
+            let vc = segue.destination as! DatePickerVC
+            vc.delegate = self
+        }
+    }
+    
     
     
     // MARK: - Other Methods
@@ -118,13 +135,7 @@ class FormVC: UIViewController {
         if let firma = person.firma { firmaTextField.text = firma }
         if let email = person.email { emailTextField.text = email }
         if let telefon = person.telefon { telefonTextField.text = telefon }
-        if let data = person.data {
-            let formatter = DateFormatter()
-            formatter.locale = NSLocale(localeIdentifier: "PL") as Locale!
-            formatter.dateStyle = .short
-            let dataString = formatter.string(from: data)
-            dataSpotkaniaTextField.text = dataString
-        }
+        if let data = person.data { dataLabel = changeDateTypeToString(date: data) }
         if let zgoda = person.zgoda1 { zgoda1 = zgoda }
         if let zgoda = person.zgoda2 { zgoda2 = zgoda }
     }
@@ -141,7 +152,22 @@ class FormVC: UIViewController {
         person.zgoda2 = zgoda2
     }
     
+    // zapisujemy datę otrzymaną z DatePickera
+    func didSelectDate(date: Date) {
+        person.data = date
+        dataLabel = changeDateTypeToString(date: date)
+
+        datePickerContainer.alpha = 0
+    }
     
+    // metoda zamienia datę z postaci Date na String
+    func changeDateTypeToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "PL") as Locale!
+        formatter.dateStyle = .short
+        let dateString = formatter.string(from: date)
+        return dateString
+    }
     
 
 /*
