@@ -15,6 +15,9 @@
 		CF82BD2A1DD1A7A800F6F720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF82BD281DD1A7A800F6F720 /* LaunchScreen.storyboard */; };
 		CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD331DD1AAED00F6F720 /* FirstVC.swift */; };
 		CF82BD361DD1AB7400F6F720 /* FormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD351DD1AB7400F6F720 /* FormVC.swift */; };
+		CF82BD3C1DD1DDAF00F6F720 /* KreskaGruba.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */; };
+		CFDD70D71DD1E26E009D1B5A /* KreskaCienka2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */; };
+		CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		CF82BD2B1DD1A7A800F6F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF82BD331DD1AAED00F6F720 /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		CF82BD351DD1AB7400F6F720 /* FormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormVC.swift; sourceTree = "<group>"; };
+		CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaGruba.swift; sourceTree = "<group>"; };
+		CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaCienka2.swift; sourceTree = "<group>"; };
+		CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaCienka1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 		CF82BD321DD1AA9C00F6F720 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */,
+				CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */,
+				CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -165,7 +174,10 @@
 				CF82BD361DD1AB7400F6F720 /* FormVC.swift in Sources */,
 				CF82BD1F1DD1A7A800F6F720 /* ViewController.swift in Sources */,
 				CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */,
+				CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */,
+				CFDD70D71DD1E26E009D1B5A /* KreskaCienka2.swift in Sources */,
 				CF82BD251DD1A7A800F6F720 /* formularz.xcdatamodeld in Sources */,
+				CF82BD3C1DD1DDAF00F6F720 /* KreskaGruba.swift in Sources */,
 				CF82BD1D1DD1A7A800F6F720 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +344,7 @@
 				CF82BD301DD1A7A800F6F720 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

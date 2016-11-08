@@ -58,10 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_project" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-MS-1sv">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-o4-OnL" userLabel="Belka górna">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPo-o4-OnL" userLabel="Belka górna" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="78"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dane osobowe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRG-wj-O38">
@@ -78,7 +75,7 @@
                                     <constraint firstAttribute="bottom" secondItem="lRG-wj-O38" secondAttribute="bottom" constant="18" id="hmR-eb-5M9"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pji-47-zPW" userLabel="Pole Imię">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pji-47-zPW" userLabel="Pole Imię" customClass="KreskaGruba" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="30" y="78" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-CJ-ABd">
@@ -104,7 +101,7 @@
                                     <constraint firstItem="zLF-CJ-ABd" firstAttribute="leading" secondItem="Pji-47-zPW" secondAttribute="leading" constant="-1" id="x5D-Ji-L3X"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGk-t0-2Vr" userLabel="Pole Nazwisko">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGk-t0-2Vr" userLabel="Pole Nazwisko" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="395" y="78" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKS-UZ-hIw">
@@ -129,7 +126,7 @@
                                     <constraint firstAttribute="trailing" secondItem="dUq-Aj-ntT" secondAttribute="trailing" id="mGw-UA-J6P"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYN-XS-y0T" userLabel="Pole Stanowisko">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYN-XS-y0T" userLabel="Pole Stanowisko" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="30" y="205" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanowisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52l-nU-9rL">
@@ -154,7 +151,7 @@
                                     <constraint firstItem="52l-nU-9rL" firstAttribute="centerY" secondItem="lYN-XS-y0T" secondAttribute="centerY" multiplier="0.9" id="l0K-7t-knf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bad-AK-Xfk" userLabel="Pole Firma">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bad-AK-Xfk" userLabel="Pole Firma" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="395" y="205" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-Pd-Qrh">
@@ -179,7 +176,7 @@
                                     <constraint firstItem="E3d-EG-pGG" firstAttribute="leading" secondItem="bad-AK-Xfk" secondAttribute="leading" id="iB7-z3-E0O"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-9k-tDu" userLabel="Pole Adres e-mail">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-9k-tDu" userLabel="Pole Adres e-mail" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="30" y="332" width="708" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-lB-cpD">
@@ -204,7 +201,7 @@
                                     <constraint firstAttribute="trailing" secondItem="dqf-0M-AvN" secondAttribute="trailing" id="z7K-ot-bJg"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95e-mt-hXQ" userLabel="Pole Telefon">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95e-mt-hXQ" userLabel="Pole Telefon" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="30" y="459" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-xj-BUw">
@@ -229,7 +226,7 @@
                                     <constraint firstItem="Do8-xj-BUw" firstAttribute="leading" secondItem="95e-mt-hXQ" secondAttribute="leading" constant="-1" id="hZl-ZV-J0Z"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-mK-M8Z" userLabel="Pole Data spotkania">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-mK-M8Z" userLabel="Pole Data spotkania" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="395" y="459" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data spotkania" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGw-6C-WjC">
@@ -328,7 +325,7 @@
                                     <constraint firstAttribute="trailing" secondItem="dvl-Ba-di6" secondAttribute="trailing" constant="30" id="xcH-Kh-7Yq"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-7T-ahZ" userLabel="Belka dolna">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-7T-ahZ" userLabel="Belka dolna" customClass="KreskaCienka2" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="947" width="768" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-sV-KJL">
@@ -355,17 +352,13 @@
                             <constraint firstItem="Pji-47-zPW" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" constant="30" id="3li-ME-suG"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="leading" secondItem="Pji-47-zPW" secondAttribute="trailing" constant="22" id="4CP-ph-NJa"/>
                             <constraint firstItem="B4F-52-8rD" firstAttribute="top" secondItem="95e-mt-hXQ" secondAttribute="bottom" constant="30" id="6Ha-vM-05a"/>
-                            <constraint firstAttribute="trailing" secondItem="BnK-MS-1sv" secondAttribute="trailing" id="7V4-g4-uCq"/>
-                            <constraint firstItem="BnK-MS-1sv" firstAttribute="top" secondItem="5ZH-NL-Dhp" secondAttribute="bottom" constant="-20" id="9Py-AQ-7h1"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="width" secondItem="dGk-t0-2Vr" secondAttribute="width" id="9eD-xl-Ci4"/>
                             <constraint firstItem="Pji-47-zPW" firstAttribute="top" secondItem="gPo-o4-OnL" secondAttribute="bottom" id="A8J-GW-zyd"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="height" secondItem="Pji-47-zPW" secondAttribute="height" id="Dgk-UY-3R2"/>
                             <constraint firstAttribute="trailing" secondItem="gPo-o4-OnL" secondAttribute="trailing" id="F0Q-e7-96R"/>
-                            <constraint firstItem="BnK-MS-1sv" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" id="F7X-AE-rjR"/>
                             <constraint firstItem="gPo-o4-OnL" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" id="GIh-b0-hc3"/>
                             <constraint firstItem="qDX-sV-KJL" firstAttribute="trailing" secondItem="dGk-t0-2Vr" secondAttribute="trailing" id="HdR-Eq-85S"/>
                             <constraint firstItem="lYN-XS-y0T" firstAttribute="height" secondItem="Pji-47-zPW" secondAttribute="height" id="IDE-SM-Gek"/>
-                            <constraint firstItem="0oQ-Gr-YOi" firstAttribute="top" secondItem="BnK-MS-1sv" secondAttribute="bottom" id="IWY-0g-ikg"/>
                             <constraint firstItem="LnE-9k-tDu" firstAttribute="height" secondItem="lYN-XS-y0T" secondAttribute="height" id="KO2-SW-zIH"/>
                             <constraint firstItem="LnE-9k-tDu" firstAttribute="top" secondItem="lYN-XS-y0T" secondAttribute="bottom" id="LPO-xC-FcM"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="centerX" secondItem="dGk-t0-2Vr" secondAttribute="centerX" id="NDE-XJ-O3A"/>
@@ -402,7 +395,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="form_project" width="768" height="1024"/>
         <image name="ikona_data" width="17" height="11"/>
         <image name="ptaszek" width="26" height="20"/>
     </resources>
