@@ -27,6 +27,31 @@
                                 <rect key="frame" x="191" y="289" width="386" height="447"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="rzf-HK-eJf" style="IBUITableViewCellStyleDefault" id="Ayz-cR-GSd">
+                                        <rect key="frame" x="0.0" y="28" width="386" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ayz-cR-GSd" id="oXn-iN-zed">
+                                            <rect key="frame" x="0.0" y="0.0" width="386" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rzf-HK-eJf">
+                                                    <rect key="frame" x="15" y="0.0" width="356" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" red="0.0" green="0.27058823529999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="u2r-po-WiQ" kind="show" identifier="EditEntrySegue" id="c1e-OF-fS0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZhR-m0-Ngn" id="knF-eB-bUl"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-4V-X6G">
                                 <rect key="frame" x="293" y="776" width="182" height="41"/>
@@ -36,12 +61,15 @@
                                     <color key="titleColor" red="0.0" green="0.27450980392156865" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="u2r-po-WiQ" kind="show" id="Uiz-LY-wJ6"/>
+                                    <segue destination="u2r-po-WiQ" kind="show" identifier="NewEntrySegue" id="LGH-aF-z9Z"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.89411764705882346" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TWw-ki-JNQ" id="4So-3v-5LE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCm-E8-DfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +113,7 @@
                                         <color key="textColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Adam" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-vI-NLr">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-vI-NLr">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -111,7 +139,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Kowalski" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-Aj-ntT">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-Aj-ntT">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -136,7 +164,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Product Manager" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-rB-F5D">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-rB-F5D">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -161,7 +189,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Connectmedica" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="E3d-EG-pGG">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="E3d-EG-pGG">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -186,7 +214,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="adam.kowalski@connectmedica.com" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-0M-AvN">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-0M-AvN">
                                         <rect key="frame" x="0.0" y="90" width="708" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -236,23 +264,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-T1-onk">
+                                        <rect key="frame" x="0.0" y="90" width="124" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.20023544520547945" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxz-hq-dqC">
-                                        <rect key="frame" x="287" y="92" width="56" height="26"/>
+                                        <rect key="frame" x="0.0" y="92" width="343" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="HhU-2L-EjU"/>
-                                            <constraint firstAttribute="width" constant="56" id="LO1-3s-isn"/>
                                         </constraints>
                                         <state key="normal" image="ikona_data"/>
                                         <connections>
                                             <action selector="selectedDateButton:" destination="u2r-po-WiQ" eventType="touchUpInside" id="4eZ-8Z-7Md"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-T1-onk">
-                                        <rect key="frame" x="0.0" y="90" width="124" height="26"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -262,6 +289,7 @@
                                     <constraint firstAttribute="trailing" secondItem="fxz-hq-dqC" secondAttribute="trailing" id="m2S-1y-fIm"/>
                                     <constraint firstItem="MGw-6C-WjC" firstAttribute="centerY" secondItem="nQs-mK-M8Z" secondAttribute="centerY" multiplier="0.9" id="ohw-4B-JRB"/>
                                     <constraint firstItem="MGw-6C-WjC" firstAttribute="leading" secondItem="nQs-mK-M8Z" secondAttribute="leading" constant="-1" id="s9l-Fp-pRe"/>
+                                    <constraint firstItem="fxz-hq-dqC" firstAttribute="width" secondItem="nQs-mK-M8Z" secondAttribute="width" id="vL5-F6-jbj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-52-8rD" userLabel="Zgoda1">
@@ -454,6 +482,9 @@
                                 <state key="normal" title="Wybierz">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="readDate:" destination="iZo-r6-CQW" eventType="touchUpInside" id="f4O-HM-kFi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -464,6 +495,9 @@
                             <constraint firstItem="75w-OI-Uvu" firstAttribute="top" secondItem="sSe-4c-UM4" secondAttribute="topMargin" constant="10" id="uU7-9p-NIG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="75w-OI-Uvu" id="b10-SV-1qt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdB-EP-EMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,4 +508,7 @@
         <image name="ikona_data" width="17" height="11"/>
         <image name="ptaszek" width="26" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LGH-aF-z9Z"/>
+    </inferredMetricsTieBreakers>
 </document>

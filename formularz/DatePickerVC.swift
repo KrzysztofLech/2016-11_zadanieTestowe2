@@ -10,12 +10,23 @@ import UIKit
 
 class DatePickerVC: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
+    
+    @IBAction func readDate(_ sender: UIButton) {
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "PL") as Locale!
+        formatter.dateStyle = .short
+        
+        let date = formatter.string(from: datePicker.date)
+        
+        print(date)
+    }
 
     
 
@@ -28,5 +39,8 @@ class DatePickerVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+
+    
 
 }

@@ -8,12 +8,16 @@
 
 import UIKit
 
-class FormVC: UIViewController {
+protocol PersonDataSelectionDelegate {
+    func didSelectData(vc: UIViewController, data: Person)
+}
 
-    var person = Person()
+
+class FormVC: UIViewController {
     
-    
+
     // MARK:- Outlets
+    /// -----------------------------------------------------------------------------------
     
     @IBOutlet weak var imieTextField: UITextField!
     @IBOutlet weak var nazwiskoTextField: UITextField!
@@ -28,6 +32,10 @@ class FormVC: UIViewController {
     
     
     // MARK:- Properties
+    /// -----------------------------------------------------------------------------------
+    
+    var person = Person()
+    var newEntry = true
     
     var zgoda1 = true {
         didSet {
@@ -53,18 +61,33 @@ class FormVC: UIViewController {
         }
     }
     
+    var delegate: PersonDataSelectionDelegate! = nil
+    
     
     
     
     // MARK:- System Methods
+    /// -----------------------------------------------------------------------------------
     
+    /*
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        przypiszPrzykladoweDane()
+        
+    }*/
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // jeśli edytujemy dane, to zapisujemy je do odpowiednich pól formularza
+        if !newEntry { readData() }
     }
+    
+    
 
     // MARK:- Action Methods
+    /// -----------------------------------------------------------------------------------
     
     @IBAction func selectedDateButton(_ sender: UIButton) {
         datePickerContainer.alpha = 1.0
@@ -74,22 +97,54 @@ class FormVC: UIViewController {
 
     @IBAction func selectedApproval2(_ sender: UIButton) { zgoda2 = !zgoda2 }
 
+    // zakończenie wpisywania danych do formularza
     @IBAction func selectedWriteButton(_ sender: UIButton) {
-        pokazDane()
+        readDataFromForm()
+        //pokazDane()
+        delegate.didSelectData(vc: self, data: person)
     }
     
-    func przypiszPrzykladoweDane() {
-        person.imie =       "Tomek"
-        person.nazwisko =   "Jabłoński"
-        person.stanowisko = "Szef"
-        person.firma =      "IBM"
-        person.email =      "t.jablonski@ibm.com"
-        person.telefon =    "501390999"
-        //person.data =
-        zgoda1 =     false
-        zgoda2 =     false
+    
+    
+    
+    // MARK: - Other Methods
+    /// -----------------------------------------------------------------------------------
+    
+    // odczyt przekazanych danych i zapisanie istniejących wpisów w odpowiednie miejsca
+    func readData() {
+        if let imie = person.imie { imieTextField.text = imie}
+        if let nazwisko = person.nazwisko { nazwiskoTextField.text = nazwisko }
+        if let stanowisko = person.stanowisko { stanowiskoTextField.text = stanowisko }
+        if let firma = person.firma { firmaTextField.text = firma }
+        if let email = person.email { emailTextField.text = email }
+        if let telefon = person.telefon { telefonTextField.text = telefon }
+        if let data = person.data {
+            let formatter = DateFormatter()
+            formatter.locale = NSLocale(localeIdentifier: "PL") as Locale!
+            formatter.dateStyle = .short
+            let dataString = formatter.string(from: data)
+            dataSpotkaniaTextField.text = dataString
+        }
+        if let zgoda = person.zgoda1 { zgoda1 = zgoda }
+        if let zgoda = person.zgoda2 { zgoda2 = zgoda }
     }
     
+    // odczyt danych z formularza
+    func readDataFromForm() {
+        person.imie = imieTextField.text
+        person.nazwisko = nazwiskoTextField.text
+        person.stanowisko = stanowiskoTextField.text
+        person.firma = firmaTextField.text
+        person.email = emailTextField.text
+        person.telefon = telefonTextField.text
+        person.zgoda1 = zgoda1
+        person.zgoda2 = zgoda2
+    }
+    
+    
+    
+
+/*
     func pokazDane() {
         print("Imię: \(person.imie)")
         print("Nazwisko: \(person.nazwisko)")
@@ -97,9 +152,9 @@ class FormVC: UIViewController {
         print("Firma: \(person.firma)")
         print("E-mail: \(person.email)")
         print("Telefon: \(person.telefon)")
-        //print("Data: \(person.data)")
+        print("Data: \(person.data)")
         print("Zgoda1: \(person.zgoda1)")
         print("Zgoda2: \(person.zgoda2)")
     }
-    
+*/    
 }
