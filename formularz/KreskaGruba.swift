@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class KreskaGruba: UIView {
 
+    // tworzymy GRUBĄ linię na dole obiektu
+    
     override func draw(_ rect: CGRect) {
         
         let path = UIBezierPath()

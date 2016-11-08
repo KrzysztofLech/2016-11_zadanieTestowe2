@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class KreskaCienka1: UIView {
 
+    // tworzymy cienką linię na dole obiektu
+    
     override func draw(_ rect: CGRect) {
         
         let path = UIBezierPath()

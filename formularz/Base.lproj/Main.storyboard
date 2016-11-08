@@ -242,6 +242,9 @@
                                             <constraint firstAttribute="width" constant="56" id="LO1-3s-isn"/>
                                         </constraints>
                                         <state key="normal" image="ikona_data"/>
+                                        <connections>
+                                            <action selector="selectedDateButton:" destination="u2r-po-WiQ" eventType="touchUpInside" id="4eZ-8Z-7Md"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-T1-onk">
                                         <rect key="frame" x="0.0" y="90" width="124" height="26"/>
@@ -271,6 +274,9 @@
                                             <constraint firstAttribute="height" constant="42" id="voS-cG-1J7"/>
                                         </constraints>
                                         <state key="normal" image="ptaszek"/>
+                                        <connections>
+                                            <action selector="selectedApproval1:" destination="u2r-po-WiQ" eventType="touchUpInside" id="QQn-1a-DzV"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEq-Tq-HR7">
                                         <rect key="frame" x="58" y="6" width="590" height="42"/>
@@ -304,6 +310,9 @@
                                             <constraint firstAttribute="height" constant="42" id="vlB-kB-iWT"/>
                                         </constraints>
                                         <state key="normal" image="ptaszek"/>
+                                        <connections>
+                                            <action selector="selectedApproval2:" destination="u2r-po-WiQ" eventType="touchUpInside" id="5iG-3s-sFi"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-Ba-di6">
                                         <rect key="frame" x="58" y="-1" width="620" height="52"/>
@@ -334,6 +343,9 @@
                                         <state key="normal" title="Zapisz">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectedWriteButton:" destination="u2r-po-WiQ" eventType="touchUpInside" id="ky5-ak-Mhp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -388,6 +400,17 @@
                             <constraint firstItem="95e-mt-hXQ" firstAttribute="centerX" secondItem="Pji-47-zPW" secondAttribute="centerX" id="yEf-p5-fvl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dataSpotkaniaTextField" destination="fXT-T1-onk" id="0c4-Ho-ezx"/>
+                        <outlet property="emailTextField" destination="dqf-0M-AvN" id="5aP-Fe-Equ"/>
+                        <outlet property="firmaTextField" destination="E3d-EG-pGG" id="dFn-Pp-mbs"/>
+                        <outlet property="imieTextField" destination="cY1-vI-NLr" id="F2R-ou-RBm"/>
+                        <outlet property="nazwiskoTextField" destination="dUq-Aj-ntT" id="MEt-hg-at9"/>
+                        <outlet property="stanowiskoTextField" destination="vfp-rB-F5D" id="yni-ha-x5N"/>
+                        <outlet property="telefonTextField" destination="J8c-WE-PFD" id="4B1-wr-qkx"/>
+                        <outlet property="zgoda1Button" destination="IlH-rR-fNi" id="jVF-x0-inA"/>
+                        <outlet property="zgoda2Button" destination="nrD-iV-bPG" id="JSv-PJ-XgY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXB-Rj-pRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
