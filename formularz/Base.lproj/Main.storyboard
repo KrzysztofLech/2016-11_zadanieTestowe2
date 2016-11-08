@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -354,6 +355,16 @@
                                     <constraint firstAttribute="height" constant="77" id="rrh-Lz-hWf"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynG-kb-ROW" userLabel="Date Picker Container">
+                                <rect key="frame" x="395" y="596" width="343" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="y3Z-dM-wwr"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="iZo-r6-CQW" kind="embed" id="7u2-1R-WzU"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -364,6 +375,7 @@
                             <constraint firstItem="Pji-47-zPW" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" constant="30" id="3li-ME-suG"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="leading" secondItem="Pji-47-zPW" secondAttribute="trailing" constant="22" id="4CP-ph-NJa"/>
                             <constraint firstItem="B4F-52-8rD" firstAttribute="top" secondItem="95e-mt-hXQ" secondAttribute="bottom" constant="30" id="6Ha-vM-05a"/>
+                            <constraint firstItem="ynG-kb-ROW" firstAttribute="top" secondItem="nQs-mK-M8Z" secondAttribute="bottom" constant="10" id="7IA-C9-n2U"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="width" secondItem="dGk-t0-2Vr" secondAttribute="width" id="9eD-xl-Ci4"/>
                             <constraint firstItem="Pji-47-zPW" firstAttribute="top" secondItem="gPo-o4-OnL" secondAttribute="bottom" id="A8J-GW-zyd"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="height" secondItem="Pji-47-zPW" secondAttribute="height" id="Dgk-UY-3R2"/>
@@ -380,6 +392,8 @@
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="height" secondItem="dGk-t0-2Vr" secondAttribute="height" id="TGH-dD-VdB"/>
                             <constraint firstItem="lYN-XS-y0T" firstAttribute="centerX" secondItem="Pji-47-zPW" secondAttribute="centerX" id="Txx-eo-7er"/>
                             <constraint firstAttribute="trailing" secondItem="hbt-7T-ahZ" secondAttribute="trailing" id="U7L-dm-QWW"/>
+                            <constraint firstItem="ynG-kb-ROW" firstAttribute="width" secondItem="dGk-t0-2Vr" secondAttribute="width" id="VXc-JM-dEP"/>
+                            <constraint firstItem="ynG-kb-ROW" firstAttribute="centerX" secondItem="dGk-t0-2Vr" secondAttribute="centerX" id="WFO-7O-VbA"/>
                             <constraint firstItem="LnE-9k-tDu" firstAttribute="leading" secondItem="lYN-XS-y0T" secondAttribute="leading" id="ZhG-tI-Uw4"/>
                             <constraint firstItem="95e-mt-hXQ" firstAttribute="width" secondItem="Pji-47-zPW" secondAttribute="width" id="Zsn-WX-fHW"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="centerY" secondItem="Pji-47-zPW" secondAttribute="centerY" id="ZzB-bH-GX8"/>
@@ -402,6 +416,7 @@
                     </view>
                     <connections>
                         <outlet property="dataSpotkaniaTextField" destination="fXT-T1-onk" id="0c4-Ho-ezx"/>
+                        <outlet property="datePickerContainer" destination="ynG-kb-ROW" id="KsR-0A-Xkd"/>
                         <outlet property="emailTextField" destination="dqf-0M-AvN" id="5aP-Fe-Equ"/>
                         <outlet property="firmaTextField" destination="E3d-EG-pGG" id="dFn-Pp-mbs"/>
                         <outlet property="imieTextField" destination="cY1-vI-NLr" id="F2R-ou-RBm"/>
@@ -415,6 +430,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXB-Rj-pRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="226.5625" y="-591.2109375"/>
+        </scene>
+        <!--Date PickerVC-->
+        <scene sceneID="QMq-W9-g5k">
+            <objects>
+                <viewController id="iZo-r6-CQW" customClass="DatePickerVC" customModule="formularz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sSe-4c-UM4">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="260"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="75w-OI-Uvu">
+                                <rect key="frame" x="12" y="10" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="500301230.89451301">
+                                    <!--2016-11-08 12:33:50 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="499690800">
+                                    <!--2016-11-01 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAc-JF-ZaO">
+                                <rect key="frame" x="126" y="208" width="91" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Wybierz">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="WAc-JF-ZaO" secondAttribute="bottom" constant="10" id="7dj-ay-dfX"/>
+                            <constraint firstItem="WAc-JF-ZaO" firstAttribute="centerX" secondItem="sSe-4c-UM4" secondAttribute="centerX" id="FHh-BO-xa9"/>
+                            <constraint firstItem="75w-OI-Uvu" firstAttribute="centerX" secondItem="sSe-4c-UM4" secondAttribute="centerX" id="tYa-ER-FJA"/>
+                            <constraint firstItem="75w-OI-Uvu" firstAttribute="top" secondItem="sSe-4c-UM4" secondAttribute="topMargin" constant="10" id="uU7-9p-NIG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdB-EP-EMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727.734375" y="-591.2109375"/>
         </scene>
     </scenes>
     <resources>

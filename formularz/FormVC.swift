@@ -24,6 +24,7 @@ class FormVC: UIViewController {
     @IBOutlet weak var dataSpotkaniaTextField: UILabel!
     @IBOutlet weak var zgoda1Button: UIButton!
     @IBOutlet weak var zgoda2Button: UIButton!
+    @IBOutlet weak var datePickerContainer: UIView!
     
     
     // MARK:- Properties
@@ -66,7 +67,7 @@ class FormVC: UIViewController {
     // MARK:- Action Methods
     
     @IBAction func selectedDateButton(_ sender: UIButton) {
-        print("Data")
+        datePickerContainer.alpha = 1.0
     }
 
     @IBAction func selectedApproval1(_ sender: UIButton) { zgoda1 = !zgoda1 }
