@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="78"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dane osobowe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRG-wj-O38">
-                                        <rect key="frame" x="309" y="33" width="150" height="27"/>
+                                        <rect key="frame" x="308.5" y="33" width="150" height="27"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -117,19 +117,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pji-47-zPW" userLabel="Pole Imię" customClass="KreskaGruba" customModule="formularz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="78" width="343" height="127"/>
+                                <rect key="frame" x="30" y="78" width="343.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-CJ-ABd">
-                                        <rect key="frame" x="-1" y="40.5" width="50" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="50" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-vI-NLr">
-                                        <rect key="frame" x="0.0" y="90" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="90" width="343.5" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="4gf-NU-3ZC"/>
                                         </connections>
@@ -137,7 +143,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="FeV-y9-OKW"/>
+                                    <constraint firstAttribute="height" constant="127" id="FeV-y9-OKW">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="zLF-CJ-ABd" firstAttribute="centerY" secondItem="Pji-47-zPW" secondAttribute="centerY" multiplier="0.9" id="U0b-uh-srE"/>
                                     <constraint firstItem="cY1-vI-NLr" firstAttribute="centerY" secondItem="Pji-47-zPW" secondAttribute="centerY" multiplier="1.62" id="hk8-Xg-idl"/>
                                     <constraint firstItem="cY1-vI-NLr" firstAttribute="leading" secondItem="Pji-47-zPW" secondAttribute="leading" id="l3t-R5-JvP"/>
@@ -149,16 +157,22 @@
                                 <rect key="frame" x="395" y="78" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKS-UZ-hIw">
-                                        <rect key="frame" x="-1" y="40.5" width="115" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="115" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-Aj-ntT">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="x3j-cW-XA0"/>
                                         </connections>
@@ -174,19 +188,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYN-XS-y0T" userLabel="Pole Stanowisko" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="205" width="343" height="127"/>
+                                <rect key="frame" x="30" y="205" width="343.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanowisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52l-nU-9rL">
-                                        <rect key="frame" x="-1" y="40.5" width="138" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="138" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-rB-F5D">
-                                        <rect key="frame" x="0.0" y="90" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="90" width="343.5" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="gg5-Ky-hHg"/>
                                         </connections>
@@ -205,16 +225,22 @@
                                 <rect key="frame" x="395" y="205" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-Pd-Qrh">
-                                        <rect key="frame" x="-1" y="40.5" width="67" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="67" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="E3d-EG-pGG">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="GrG-5N-hrn"/>
                                         </connections>
@@ -230,19 +256,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnE-9k-tDu" userLabel="Pole Adres e-mail" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="332" width="708" height="127"/>
+                                <rect key="frame" x="30" y="332" width="708.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-lB-cpD">
-                                        <rect key="frame" x="-1" y="40.5" width="152" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="152" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dqf-0M-AvN">
-                                        <rect key="frame" x="0.0" y="90" width="708" height="26"/>
+                                        <rect key="frame" x="0.0" y="90" width="708.5" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="XZj-Ne-7XT"/>
                                         </connections>
@@ -258,19 +290,25 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95e-mt-hXQ" userLabel="Pole Telefon" customClass="KreskaCienka1" customModule="formularz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="459" width="343" height="127"/>
+                                <rect key="frame" x="30" y="459" width="343.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-xj-BUw">
-                                        <rect key="frame" x="-1" y="40.5" width="88" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="87.5" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-WE-PFD">
-                                        <rect key="frame" x="0.0" y="90" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="90" width="343.5" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                         <connections>
                                             <outlet property="delegate" destination="u2r-po-WiQ" id="UDg-f8-njo"/>
                                         </connections>
@@ -289,19 +327,25 @@
                                 <rect key="frame" x="395" y="459" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data spotkania" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGw-6C-WjC">
-                                        <rect key="frame" x="-1" y="40.5" width="180" height="33"/>
+                                        <rect key="frame" x="-1" y="41" width="179.5" height="32.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz datę" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXT-T1-onk">
-                                        <rect key="frame" x="0.0" y="90" width="124" height="26"/>
+                                        <rect key="frame" x="0.0" y="90" width="124" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.20023544520547945" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxz-hq-dqC">
-                                        <rect key="frame" x="0.0" y="92" width="343" height="26"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="343" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="HhU-2L-EjU"/>
                                         </constraints>
@@ -323,9 +367,9 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4F-52-8rD" userLabel="Zgoda1">
-                                <rect key="frame" x="30" y="616" width="708" height="54"/>
+                                <rect key="frame" x="30" y="616" width="708.5" height="54"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-rR-fNi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-rR-fNi" customClass="Kolo" customModule="formularz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="6" width="42" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -338,10 +382,12 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEq-Tq-HR7">
-                                        <rect key="frame" x="58" y="6" width="590" height="42"/>
+                                        <rect key="frame" x="58" y="6" width="590.5" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="42" id="au7-ZZ-9bj"/>
+                                            <constraint firstAttribute="height" constant="42" id="au7-ZZ-9bj">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
                                         </constraints>
                                         <string key="text">Wyrażam zgodę na otrzymywanie od firmy ABCDE Polska Sp. z o.o. ABCDE Polska Dystrybucja Sp. z o.o. oraz ABCDE PLC. informacji handlowych i naukowych drogą elektroniczną na wskazany powyżej adres email.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -351,17 +397,23 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="HEq-Tq-HR7" firstAttribute="centerY" secondItem="IlH-rR-fNi" secondAttribute="centerY" id="OIT-Ju-zVi"/>
-                                    <constraint firstItem="HEq-Tq-HR7" firstAttribute="leading" secondItem="IlH-rR-fNi" secondAttribute="trailing" constant="16" id="Qax-I1-FOs"/>
-                                    <constraint firstAttribute="height" constant="54" id="TIg-P6-DQT"/>
-                                    <constraint firstAttribute="trailing" secondItem="HEq-Tq-HR7" secondAttribute="trailing" constant="60" id="fg1-5K-hoc"/>
+                                    <constraint firstItem="HEq-Tq-HR7" firstAttribute="leading" secondItem="IlH-rR-fNi" secondAttribute="trailing" constant="16" id="Qax-I1-FOs">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="54" id="TIg-P6-DQT">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="HEq-Tq-HR7" secondAttribute="trailing" constant="60" id="fg1-5K-hoc">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                    </constraint>
                                     <constraint firstItem="IlH-rR-fNi" firstAttribute="leading" secondItem="B4F-52-8rD" secondAttribute="leading" id="oxE-Yz-RJI"/>
                                     <constraint firstItem="IlH-rR-fNi" firstAttribute="centerY" secondItem="B4F-52-8rD" secondAttribute="centerY" id="vBr-Vo-Wsi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-r1-2aZ" userLabel="Zgoda2">
-                                <rect key="frame" x="30" y="689" width="708" height="54"/>
+                                <rect key="frame" x="30" y="689" width="708.5" height="54"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-iV-bPG">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrD-iV-bPG" customClass="Kolo" customModule="formularz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="6" width="42" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -374,10 +426,12 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-Ba-di6">
-                                        <rect key="frame" x="58" y="-1" width="620" height="52"/>
+                                        <rect key="frame" x="58" y="-1" width="620.5" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="G2U-4t-fX8"/>
+                                            <constraint firstAttribute="height" constant="52" id="G2U-4t-fX8">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                            </constraint>
                                         </constraints>
                                         <string key="text">Wyrażam zgodę na przetwarzanie swoich danych osobowych, zgodnie z ustawą z dnia 29 sierpnia 1997r. o ochronie danych osobowych (tekst jednolity z dnia 17.06.2002r. Dz. U. Nr 101 poz. 926, z późna. zm.) w celach reklamowych i marketingowych przez firmę ABCDE Polska Sp. z o.o. oraz ABCDE Polska Dystrybucja Sp. z o.o.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -388,16 +442,20 @@
                                 <constraints>
                                     <constraint firstItem="nrD-iV-bPG" firstAttribute="leading" secondItem="1Mj-r1-2aZ" secondAttribute="leading" id="d83-oB-t7k"/>
                                     <constraint firstItem="dvl-Ba-di6" firstAttribute="centerY" secondItem="nrD-iV-bPG" secondAttribute="centerY" constant="-2" id="jU4-Nt-1Qq"/>
-                                    <constraint firstItem="dvl-Ba-di6" firstAttribute="leading" secondItem="nrD-iV-bPG" secondAttribute="trailing" constant="16" id="jnO-GK-5b3"/>
+                                    <constraint firstItem="dvl-Ba-di6" firstAttribute="leading" secondItem="nrD-iV-bPG" secondAttribute="trailing" constant="16" id="jnO-GK-5b3">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                                    </constraint>
                                     <constraint firstItem="nrD-iV-bPG" firstAttribute="centerY" secondItem="1Mj-r1-2aZ" secondAttribute="centerY" id="pRB-YJ-OaS"/>
-                                    <constraint firstAttribute="trailing" secondItem="dvl-Ba-di6" secondAttribute="trailing" constant="30" id="xcH-Kh-7Yq"/>
+                                    <constraint firstAttribute="trailing" secondItem="dvl-Ba-di6" secondAttribute="trailing" constant="30" id="xcH-Kh-7Yq">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbt-7T-ahZ" userLabel="Belka dolna" customClass="KreskaCienka2" customModule="formularz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="947" width="768" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-sV-KJL">
-                                        <rect key="frame" x="663" y="15.5" width="75" height="42"/>
+                                        <rect key="frame" x="663.5" y="15" width="75" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Zapisz">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,7 +490,9 @@
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="width" secondItem="Pji-47-zPW" secondAttribute="width" id="34e-cK-WbH"/>
                             <constraint firstItem="Pji-47-zPW" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" constant="30" id="3li-ME-suG"/>
                             <constraint firstItem="dGk-t0-2Vr" firstAttribute="leading" secondItem="Pji-47-zPW" secondAttribute="trailing" constant="22" id="4CP-ph-NJa"/>
-                            <constraint firstItem="B4F-52-8rD" firstAttribute="top" secondItem="95e-mt-hXQ" secondAttribute="bottom" constant="30" id="6Ha-vM-05a"/>
+                            <constraint firstItem="B4F-52-8rD" firstAttribute="top" secondItem="95e-mt-hXQ" secondAttribute="bottom" constant="30" id="6Ha-vM-05a">
+                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstItem="ynG-kb-ROW" firstAttribute="top" secondItem="nQs-mK-M8Z" secondAttribute="bottom" constant="10" id="7IA-C9-n2U"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="width" secondItem="dGk-t0-2Vr" secondAttribute="width" id="9eD-xl-Ci4"/>
                             <constraint firstItem="Pji-47-zPW" firstAttribute="top" secondItem="gPo-o4-OnL" secondAttribute="bottom" id="A8J-GW-zyd"/>
@@ -446,6 +506,7 @@
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="centerX" secondItem="dGk-t0-2Vr" secondAttribute="centerX" id="NDE-XJ-O3A"/>
                             <constraint firstItem="gPo-o4-OnL" firstAttribute="top" secondItem="YDV-fp-NlB" secondAttribute="top" id="NaJ-VV-btZ"/>
                             <constraint firstItem="hbt-7T-ahZ" firstAttribute="leading" secondItem="YDV-fp-NlB" secondAttribute="leading" id="NjA-6s-leF"/>
+                            <constraint firstItem="ynG-kb-ROW" firstAttribute="width" secondItem="YDV-fp-NlB" secondAttribute="width" id="Npd-56-ZDR"/>
                             <constraint firstItem="nQs-mK-M8Z" firstAttribute="centerX" secondItem="dGk-t0-2Vr" secondAttribute="centerX" id="OOw-VA-acu"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="height" secondItem="dGk-t0-2Vr" secondAttribute="height" id="TGH-dD-VdB"/>
                             <constraint firstItem="lYN-XS-y0T" firstAttribute="centerX" secondItem="Pji-47-zPW" secondAttribute="centerX" id="Txx-eo-7er"/>
@@ -458,6 +519,7 @@
                             <constraint firstItem="1Mj-r1-2aZ" firstAttribute="width" secondItem="B4F-52-8rD" secondAttribute="width" id="a26-2k-SLh"/>
                             <constraint firstItem="bad-AK-Xfk" firstAttribute="top" secondItem="dGk-t0-2Vr" secondAttribute="bottom" id="cg9-gC-zmt"/>
                             <constraint firstAttribute="trailing" secondItem="dGk-t0-2Vr" secondAttribute="trailing" constant="30" id="dx6-82-Aff"/>
+                            <constraint firstItem="ynG-kb-ROW" firstAttribute="centerX" secondItem="YDV-fp-NlB" secondAttribute="centerX" id="fyM-pJ-Gd9"/>
                             <constraint firstItem="0oQ-Gr-YOi" firstAttribute="top" secondItem="hbt-7T-ahZ" secondAttribute="bottom" id="gsv-DV-NcQ"/>
                             <constraint firstItem="1Mj-r1-2aZ" firstAttribute="centerX" secondItem="B4F-52-8rD" secondAttribute="centerX" id="jDx-ju-FOx"/>
                             <constraint firstItem="B4F-52-8rD" firstAttribute="centerX" secondItem="LnE-9k-tDu" secondAttribute="centerX" id="jZV-E8-jpW"/>
@@ -466,11 +528,27 @@
                             <constraint firstItem="95e-mt-hXQ" firstAttribute="top" secondItem="LnE-9k-tDu" secondAttribute="bottom" id="orx-6S-Jnu"/>
                             <constraint firstItem="B4F-52-8rD" firstAttribute="width" secondItem="LnE-9k-tDu" secondAttribute="width" id="pcX-7V-U4K"/>
                             <constraint firstItem="nQs-mK-M8Z" firstAttribute="top" secondItem="LnE-9k-tDu" secondAttribute="bottom" id="tSv-07-kBj"/>
-                            <constraint firstItem="1Mj-r1-2aZ" firstAttribute="top" secondItem="B4F-52-8rD" secondAttribute="bottom" constant="19" id="uDf-wJ-pez"/>
+                            <constraint firstItem="1Mj-r1-2aZ" firstAttribute="top" secondItem="B4F-52-8rD" secondAttribute="bottom" constant="19" id="uDf-wJ-pez">
+                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                            </constraint>
                             <constraint firstItem="lYN-XS-y0T" firstAttribute="width" secondItem="Pji-47-zPW" secondAttribute="width" id="vtU-tO-aVO"/>
                             <constraint firstItem="lYN-XS-y0T" firstAttribute="top" secondItem="Pji-47-zPW" secondAttribute="bottom" id="xA8-9R-Dtb"/>
                             <constraint firstItem="95e-mt-hXQ" firstAttribute="centerX" secondItem="Pji-47-zPW" secondAttribute="centerX" id="yEf-p5-fvl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Npd-56-ZDR"/>
+                                <exclude reference="fyM-pJ-Gd9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Npd-56-ZDR"/>
+                                <exclude reference="VXc-JM-dEP"/>
+                                <exclude reference="WFO-7O-VbA"/>
+                                <include reference="fyM-pJ-Gd9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="dataSpotkaniaTextField" destination="fXT-T1-onk" id="0c4-Ho-ezx"/>
@@ -499,7 +577,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="75w-OI-Uvu">
-                                <rect key="frame" x="11" y="10" width="320" height="216"/>
+                                <rect key="frame" x="12" y="10" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500301230.89451301">
                                     <!--2016-11-08 12:33:50 +0000-->
                                 </date>
@@ -532,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdB-EP-EMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727.734375" y="-591.2109375"/>
+            <point key="canvasLocation" x="811" y="-591"/>
         </scene>
     </scenes>
     <resources>

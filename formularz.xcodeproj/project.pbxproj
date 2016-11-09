@@ -21,6 +21,7 @@
 		CFDD70DF1DD2034B009D1B5A /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */; };
 		CFDD70E11DD31E9E009D1B5A /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E01DD31E9E009D1B5A /* Tabela.swift */; };
 		CFDD70E31DD32C61009D1B5A /* Przycisk1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */; };
+		CFDD70E71DD3535F009D1B5A /* Kolo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E61DD3535F009D1B5A /* Kolo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		CFDD70E01DD31E9E009D1B5A /* Tabela.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
 		CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Przycisk1.swift; sourceTree = "<group>"; };
+		CFDD70E61DD3535F009D1B5A /* Kolo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kolo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */,
 				CFDD70E01DD31E9E009D1B5A /* Tabela.swift */,
 				CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */,
+				CFDD70E61DD3535F009D1B5A /* Kolo.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */,
 				CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */,
 				CFDD70D71DD1E26E009D1B5A /* KreskaCienka2.swift in Sources */,
+				CFDD70E71DD3535F009D1B5A /* Kolo.swift in Sources */,
 				CF82BD251DD1A7A800F6F720 /* formularz.xcdatamodeld in Sources */,
 				CF82BD3C1DD1DDAF00F6F720 /* KreskaGruba.swift in Sources */,
 				CFDD70DC1DD1E8E1009D1B5A /* Person.swift in Sources */,
