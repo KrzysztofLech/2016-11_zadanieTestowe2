@@ -106,7 +106,7 @@ class FormVC: UIViewController {
     /// -----------------------------------------------------------------------------------
     
     @IBAction func selectedDateButton(_ sender: UIButton) {
-        datePickerContainer.alpha = 1.0
+        datePickerAnimation(show: true)
     }
 
     @IBAction func selectedApproval1(_ sender: UIButton) { zgoda1 = !zgoda1 }
@@ -191,7 +191,7 @@ class FormVC: UIViewController {
 */    
 }
 
-// MARK: - TextField Delegate Method
+// MARK: - TextField Methods
 /// -----------------------------------------------------------------------------------
 
 extension FormVC: UITextFieldDelegate {
@@ -213,7 +213,7 @@ extension FormVC: UITextFieldDelegate {
     }
 }
 
-// MARK: - DatePicker Delegate Method
+// MARK: - DatePicker Methods
 /// -----------------------------------------------------------------------------------
 extension FormVC: DatePickerDelegate {
     
@@ -222,6 +222,40 @@ extension FormVC: DatePickerDelegate {
         person.data = date
         dataLabel = changeDateTypeToString(date: date)
         
-        datePickerContainer.alpha = 0
+        datePickerAnimation(show: false)
+    }
+    
+    // pokzujemy obiekt DatePicker
+    func datePickerAnimation(show: Bool) {
+        
+
+        if show {
+            let viewWidth = view.frame.size.width
+            let containerWidth = datePickerContainer.bounds.size.width
+            let containerPosition = datePickerContainer.center.x
+            let translation = viewWidth - containerPosition + containerWidth / 2
+            
+            // przesuwamy obiekt poza ekran i pokazujemy go
+            datePickerContainer.center.x += translation
+            datePickerContainer.alpha = 1.0
+            
+            // przesuwamy obiekt na ekran - animacja
+            UIView.animate(withDuration: 0.4,
+                           delay: 0.0,
+                           options: .curveEaseOut,
+                           animations: {
+                            self.datePickerContainer.center.x -= translation
+            })
+            
+        } else {
+            
+            // chowamy obiekt
+            UIView.animate(withDuration: 0.4,
+                           delay: 0.0,
+                           options: .curveEaseIn,
+                           animations: {
+                            self.datePickerContainer.alpha = 0
+            })
+        }
     }
 }

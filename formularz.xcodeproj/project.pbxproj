@@ -19,6 +19,8 @@
 		CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */; };
 		CFDD70DC1DD1E8E1009D1B5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70DB1DD1E8E1009D1B5A /* Person.swift */; };
 		CFDD70DF1DD2034B009D1B5A /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */; };
+		CFDD70E11DD31E9E009D1B5A /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E01DD31E9E009D1B5A /* Tabela.swift */; };
+		CFDD70E31DD32C61009D1B5A /* Przycisk1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaCienka1.swift; sourceTree = "<group>"; };
 		CFDD70DB1DD1E8E1009D1B5A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		CFDD70E01DD31E9E009D1B5A /* Tabela.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
+		CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Przycisk1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */,
 				CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */,
 				CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */,
+				CFDD70E01DD31E9E009D1B5A /* Tabela.swift */,
+				CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDD70E31DD32C61009D1B5A /* Przycisk1.swift in Sources */,
+				CFDD70E11DD31E9E009D1B5A /* Tabela.swift in Sources */,
 				CF82BD361DD1AB7400F6F720 /* FormVC.swift in Sources */,
 				CF82BD341DD1AAED00F6F720 /* FirstVC.swift in Sources */,
 				CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */,

@@ -12,6 +12,7 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
 
     var entities = [Person]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var button: Przycisk1!
     
     
     
@@ -20,6 +21,9 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // metoda buttonTap generuje animację przycisku i wyzwala segue do FormVC
+        button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonTap)))
 
         przypiszPrzykladoweDane()
     }
@@ -60,6 +64,7 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
     }
     
     
+    
     // MARK: - Other Methods
     /// -----------------------------------------------------------------------------------
     
@@ -80,20 +85,19 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
     }
  
     
-/*
-    func pokazDane(person: Person) {
-        print("Imię: \(person.imie)")
-        print("Nazwisko: \(person.nazwisko)")
-        print("Stanowsiko: \(person.stanowisko)")
-        print("Firma: \(person.firma)")
-        print("E-mail: \(person.email)")
-        print("Telefon: \(person.telefon)")
-        print("Data: \(person.data)")
-        print("Zgoda1: \(person.zgoda1)")
-        print("Zgoda2: \(person.zgoda2)")
+    // metoda animuje przycisk i wywołuje segue do FormVC
+    func buttonTap() {
+        UIView.animate(withDuration: 0.2,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.2,
+                       initialSpringVelocity: 0.0,
+                       options: [],
+                       animations: { self.button.bounds.size.width += 80.0 },
+                       completion: {_ in
+                        self.performSegue(withIdentifier: "NewEntrySegue", sender: self)
+        })
     }
-*/
-    
+  
 }
 
 
@@ -115,7 +119,4 @@ extension FirstVC: UITableViewDataSource {
         }
         return cell
     }
-    
-    
-    
 }

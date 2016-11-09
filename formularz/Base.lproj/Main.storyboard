@@ -23,20 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TWw-ki-JNQ">
-                                <rect key="frame" x="191" y="289" width="386" height="447"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TWw-ki-JNQ" customClass="Tabela" customModule="formularz" customModuleProvider="target">
+                                <rect key="frame" x="153.5" y="153.5" width="461" height="614.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="rzf-HK-eJf" style="IBUITableViewCellStyleDefault" id="Ayz-cR-GSd">
-                                        <rect key="frame" x="0.0" y="28" width="386" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="461" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ayz-cR-GSd" id="oXn-iN-zed">
-                                            <rect key="frame" x="0.0" y="0.0" width="386" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="461" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rzf-HK-eJf">
-                                                    <rect key="frame" x="15" y="0.0" width="356" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="431" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" red="0.0" green="0.27058823529999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,9 +52,8 @@
                                     <outlet property="dataSource" destination="ZhR-m0-Ngn" id="knF-eB-bUl"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-4V-X6G">
-                                <rect key="frame" x="293" y="776" width="182" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-4V-X6G" customClass="Przycisk1" customModule="formularz" customModuleProvider="target">
+                                <rect key="frame" x="293" y="798" width="182" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Dodaj nowy wpis">
                                     <color key="titleColor" red="0.0" green="0.27450980392156865" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,8 +64,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.89411764705882346" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yz4-4V-X6G" firstAttribute="centerX" secondItem="CBf-z6-ZLE" secondAttribute="centerX" id="7Ou-25-1RZ"/>
+                            <constraint firstItem="TWw-ki-JNQ" firstAttribute="centerX" secondItem="CBf-z6-ZLE" secondAttribute="centerX" id="EhC-4T-COM"/>
+                            <constraint firstItem="TWw-ki-JNQ" firstAttribute="width" secondItem="CBf-z6-ZLE" secondAttribute="width" multiplier="0.6" id="Phg-HH-0ud">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="TWw-ki-JNQ" firstAttribute="height" secondItem="CBf-z6-ZLE" secondAttribute="height" multiplier="0.6" id="ShJ-62-O8T"/>
+                            <constraint firstItem="TWw-ki-JNQ" firstAttribute="centerY" secondItem="CBf-z6-ZLE" secondAttribute="centerY" multiplier="0.9" id="gZR-yY-80d"/>
+                            <constraint firstItem="Yz4-4V-X6G" firstAttribute="top" secondItem="TWw-ki-JNQ" secondAttribute="bottom" constant="30" id="pde-BE-XhJ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="Yz4-4V-X6G" id="aRM-n7-MSQ"/>
                         <outlet property="tableView" destination="TWw-ki-JNQ" id="4So-3v-5LE"/>
                     </connections>
                 </viewController>
@@ -108,7 +120,7 @@
                                 <rect key="frame" x="30" y="78" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imię" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLF-CJ-ABd">
-                                        <rect key="frame" x="-1" y="41" width="50" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="50" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <color key="textColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -137,7 +149,7 @@
                                 <rect key="frame" x="395" y="78" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKS-UZ-hIw">
-                                        <rect key="frame" x="-1" y="41" width="115" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="115" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -165,7 +177,7 @@
                                 <rect key="frame" x="30" y="205" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanowisko" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52l-nU-9rL">
-                                        <rect key="frame" x="-1" y="41" width="138" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="138" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -193,7 +205,7 @@
                                 <rect key="frame" x="395" y="205" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-Pd-Qrh">
-                                        <rect key="frame" x="-1" y="41" width="67" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="67" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -221,7 +233,7 @@
                                 <rect key="frame" x="30" y="332" width="708" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxq-lB-cpD">
-                                        <rect key="frame" x="-1" y="41" width="152" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="152" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -249,7 +261,7 @@
                                 <rect key="frame" x="30" y="459" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Do8-xj-BUw">
-                                        <rect key="frame" x="-1" y="41" width="88" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="88" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -277,7 +289,7 @@
                                 <rect key="frame" x="395" y="459" width="343" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data spotkania" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGw-6C-WjC">
-                                        <rect key="frame" x="-1" y="41" width="180" height="33"/>
+                                        <rect key="frame" x="-1" y="40.5" width="180" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -487,7 +499,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="75w-OI-Uvu">
-                                <rect key="frame" x="12" y="10" width="320" height="216"/>
+                                <rect key="frame" x="11" y="10" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="500301230.89451301">
                                     <!--2016-11-08 12:33:50 +0000-->
                                 </date>
@@ -499,7 +511,7 @@
                                 <rect key="frame" x="126" y="208" width="91" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Wybierz">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="readDate:" destination="iZo-r6-CQW" eventType="touchUpInside" id="f4O-HM-kFi"/>
