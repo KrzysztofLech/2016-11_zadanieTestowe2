@@ -113,11 +113,14 @@
                                         <color key="textColor" red="0.0" green="0.89411764709999997" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-vI-NLr">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-vI-NLr">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="4gf-NU-3ZC"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,11 +142,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-Aj-ntT">
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Uzupełnij pole" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="dUq-Aj-ntT">
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="x3j-cW-XA0"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +174,10 @@
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="gg5-Ky-hHg"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,7 +202,10 @@
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="GrG-5N-hrn"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,7 +230,10 @@
                                         <rect key="frame" x="0.0" y="90" width="708" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="XZj-Ne-7XT"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,7 +258,10 @@
                                         <rect key="frame" x="0.0" y="90" width="343" height="26"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="u2r-po-WiQ" id="UDg-f8-njo"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -451,6 +469,7 @@
                         <outlet property="nazwiskoTextField" destination="dUq-Aj-ntT" id="MEt-hg-at9"/>
                         <outlet property="stanowiskoTextField" destination="vfp-rB-F5D" id="yni-ha-x5N"/>
                         <outlet property="telefonTextField" destination="J8c-WE-PFD" id="4B1-wr-qkx"/>
+                        <outlet property="zapiszButton" destination="qDX-sV-KJL" id="BnS-ys-IUg"/>
                         <outlet property="zgoda1Button" destination="IlH-rR-fNi" id="jVF-x0-inA"/>
                         <outlet property="zgoda2Button" destination="nrD-iV-bPG" id="JSv-PJ-XgY"/>
                     </connections>

@@ -13,7 +13,7 @@ protocol PersonDataSelectionDelegate {
 }
 
 
-class FormVC: UIViewController, DatePickerDelegate {
+class FormVC: UIViewController {
     
 
     // MARK:- Outlets
@@ -29,6 +29,7 @@ class FormVC: UIViewController, DatePickerDelegate {
     @IBOutlet weak var zgoda1Button: UIButton!
     @IBOutlet weak var zgoda2Button: UIButton!
     @IBOutlet weak var datePickerContainer: UIView!
+    @IBOutlet weak var zapiszButton: UIButton!
     
     
     // MARK:- Properties
@@ -85,9 +86,18 @@ class FormVC: UIViewController, DatePickerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // ustawiamy śledzenie TAPnięcia - w celu schowania klawiatury po dotknięciu w ekran
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+        
 
         // jeśli edytujemy dane, to zapisujemy je do odpowiednich pól formularza
-        if !newEntry { readData() }
+        if !newEntry {
+            readData()
+        } else {
+            // jeśli zaczynamy od pustego formularza, to chowamy przycisk Zapisz
+            zapiszButton.alpha = 0
+        }
     }
     
     
@@ -123,7 +133,6 @@ class FormVC: UIViewController, DatePickerDelegate {
     }
     
     
-    
     // MARK: - Other Methods
     /// -----------------------------------------------------------------------------------
     
@@ -152,13 +161,6 @@ class FormVC: UIViewController, DatePickerDelegate {
         person.zgoda2 = zgoda2
     }
     
-    // zapisujemy datę otrzymaną z DatePickera
-    func didSelectDate(date: Date) {
-        person.data = date
-        dataLabel = changeDateTypeToString(date: date)
-
-        datePickerContainer.alpha = 0
-    }
     
     // metoda zamienia datę z postaci Date na String
     func changeDateTypeToString(date: Date) -> String {
@@ -169,6 +171,10 @@ class FormVC: UIViewController, DatePickerDelegate {
         return dateString
     }
     
+    // chowanie klawiatury po dotknięciu poza pole tekstowe
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
 /*
     func pokazDane() {
@@ -183,4 +189,39 @@ class FormVC: UIViewController, DatePickerDelegate {
         print("Zgoda2: \(person.zgoda2)")
     }
 */    
+}
+
+// MARK: - TextField Delegate Method
+/// -----------------------------------------------------------------------------------
+
+extension FormVC: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        // sprawdzono czy pola Imię i Nazwisko są wypełnione, jeśli tak to włączamy przycisk Zapisz
+        if let imie = imieTextField.text, let nazwisko = nazwiskoTextField.text {
+            if imie != "" && nazwisko != "" {
+                zapiszButton.alpha = 1
+            }
+        }
+    }
+    
+    // chowamy klawiaturę po wciśnięciu klawisza Return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+}
+
+// MARK: - DatePicker Delegate Method
+/// -----------------------------------------------------------------------------------
+extension FormVC: DatePickerDelegate {
+    
+    // zapisujemy datę otrzymaną z DatePickera
+    func didSelectDate(date: Date) {
+        person.data = date
+        dataLabel = changeDateTypeToString(date: date)
+        
+        datePickerContainer.alpha = 0
+    }
 }
