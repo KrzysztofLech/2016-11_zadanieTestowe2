@@ -31,11 +31,11 @@
                                         <rect key="frame" x="0.0" y="28" width="461" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ayz-cR-GSd" id="oXn-iN-zed">
-                                            <rect key="frame" x="0.0" y="0.0" width="461" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="461" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rzf-HK-eJf">
-                                                    <rect key="frame" x="15" y="0.0" width="431" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="431" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" red="0.0" green="0.27058823529999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -572,6 +572,10 @@
         <scene sceneID="QMq-W9-g5k">
             <objects>
                 <viewController id="iZo-r6-CQW" customClass="DatePickerVC" customModule="formularz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a2P-Jb-Ra3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ebE-hD-XaJ"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sSe-4c-UM4">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="260"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,7 +17,6 @@
 		CF82BD3C1DD1DDAF00F6F720 /* KreskaGruba.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */; };
 		CFDD70D71DD1E26E009D1B5A /* KreskaCienka2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */; };
 		CFDD70D91DD1E2C4009D1B5A /* KreskaCienka1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */; };
-		CFDD70DC1DD1E8E1009D1B5A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70DB1DD1E8E1009D1B5A /* Person.swift */; };
 		CFDD70DF1DD2034B009D1B5A /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */; };
 		CFDD70E11DD31E9E009D1B5A /* Tabela.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E01DD31E9E009D1B5A /* Tabela.swift */; };
 		CFDD70E31DD32C61009D1B5A /* Przycisk1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */; };
@@ -37,7 +36,6 @@
 		CF82BD3B1DD1DDAF00F6F720 /* KreskaGruba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaGruba.swift; sourceTree = "<group>"; };
 		CFDD70D61DD1E26E009D1B5A /* KreskaCienka2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaCienka2.swift; sourceTree = "<group>"; };
 		CFDD70D81DD1E2C4009D1B5A /* KreskaCienka1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KreskaCienka1.swift; sourceTree = "<group>"; };
-		CFDD70DB1DD1E8E1009D1B5A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		CFDD70E01DD31E9E009D1B5A /* Tabela.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabela.swift; sourceTree = "<group>"; };
 		CFDD70E21DD32C61009D1B5A /* Przycisk1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Przycisk1.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				CF82BD201DD1A7A800F6F720 /* Main.storyboard */,
 				CFDD70DA1DD1E86B009D1B5A /* View Controllers */,
 				CF82BD321DD1AA9C00F6F720 /* classes */,
-				CFDD70DD1DD1E8E6009D1B5A /* Data Model */,
 				CF82BD311DD1AA1700F6F720 /* Other */,
 			);
 			path = formularz;
@@ -116,14 +113,6 @@
 				CFDD70DE1DD2034B009D1B5A /* DatePickerVC.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		CFDD70DD1DD1E8E6009D1B5A /* Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				CFDD70DB1DD1E8E1009D1B5A /* Person.swift */,
-			);
-			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +197,6 @@
 				CFDD70E71DD3535F009D1B5A /* Kolo.swift in Sources */,
 				CF82BD251DD1A7A800F6F720 /* formularz.xcdatamodeld in Sources */,
 				CF82BD3C1DD1DDAF00F6F720 /* KreskaGruba.swift in Sources */,
-				CFDD70DC1DD1E8E1009D1B5A /* Person.swift in Sources */,
 				CFDD70DF1DD2034B009D1B5A /* DatePickerVC.swift in Sources */,
 				CF82BD1D1DD1A7A800F6F720 /* AppDelegate.swift in Sources */,
 			);

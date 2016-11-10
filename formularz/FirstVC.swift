@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
-class FirstVC: UIViewController, PersonDataSelectionDelegate {
+class FirstVC: UIViewController {
 
-    var entities = [Person]()
+    var entities: [NSManagedObject] = []
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var button: Przycisk1!
     
@@ -24,34 +26,26 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
         
         // metoda buttonTap generuje animację przycisku i wyzwala segue do FormVC
         button.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(buttonTap)))
-
-        przypiszPrzykladoweDane()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        readCoreData()
+        
+        // jeśli jest to pierwsze uruchomienie to przypisujemy przykładowe dane
+        if entities.count == 0 { przypiszPrzykladoweDane() }
 
-    
-    
-    // MARK:- Delegate & Segue Methods
-    /// -----------------------------------------------------------------------------------
-    
-    func didSelectData(vc: UIViewController, data: Person) {
-        
-        // sprawdzamy czy otrzymany wpis jest nowy, czy był edytowany
-        if (vc as! FormVC).newEntry {
-            entities.append(data)
-        } else {
-            let entitiesIndex = tableView.indexPathForSelectedRow!
-            entities[entitiesIndex.row] = data
-        }
-        
         tableView.reloadData()
-        vc.dismiss(animated: true, completion: nil)
     }
+
     
     
+    // MARK:- Segue Methods
+    /// -----------------------------------------------------------------------------------
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! FormVC
-        vc.delegate = self
         
         // przekazanie danych wpisu do edycji
         if segue.identifier == "EditEntrySegue" {
@@ -63,27 +57,50 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
         }
     }
     
+
+    // MARK: - CoreData Methods
+    /// -----------------------------------------------------------------------------------
+
+    func readCoreData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Osoba")
+        
+        do {
+            entities = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    
+    func przypiszPrzykladoweDane() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Osoba", in: managedContext)!
+        let person = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        person.setValue("Adam", forKeyPath: "imie")
+        person.setValue("Kowalski", forKeyPath: "nazwisko")
+        person.setValue("Product Manager", forKeyPath: "stanowisko")
+        person.setValue("Connectmedica", forKeyPath: "firma")
+        person.setValue("adam.kowalski@connectmedica.com", forKeyPath: "email")
+        person.setValue(true, forKeyPath: "zgoda1")
+        person.setValue(true, forKeyPath: "zgoda2")
+        
+        do {
+            try managedContext.save()
+            entities.append(person)
+            
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
     
     
     // MARK: - Other Methods
     /// -----------------------------------------------------------------------------------
-    
-    func przypiszPrzykladoweDane() {
-        
-        let person = Person()
-        person.imie =       "Adam"
-        person.nazwisko =   "Kowalski"
-        person.stanowisko = "Product Manager"
-        person.firma =      "Connectmedica"
-        person.email =      "adam.kowalski@connectmedica.com"
-        person.telefon =    nil
-        person.data =       nil
-        person.zgoda1 =     true
-        person.zgoda2 =     true
-        
-        entities.append(person)
-    }
- 
     
     // metoda animuje przycisk i wywołuje segue do FormVC
     func buttonTap() {
@@ -92,7 +109,8 @@ class FirstVC: UIViewController, PersonDataSelectionDelegate {
                        usingSpringWithDamping: 0.2,
                        initialSpringVelocity: 0.0,
                        options: [],
-                       animations: { self.button.bounds.size.width += 80.0 },
+                       animations: {
+                        self.button.bounds.size.width += 50.0 },
                        completion: {_ in
                         self.performSegue(withIdentifier: "NewEntrySegue", sender: self)
         })
@@ -113,10 +131,12 @@ extension FirstVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        if let imie = entities[indexPath.row].imie, let nazwisko = entities[indexPath.row].nazwisko {
+        let entity = entities[indexPath.row]
+        if let imie = entity.value(forKeyPath: "imie") as? String, let nazwisko = entity.value(forKeyPath: "nazwisko") as? String {
             let text = imie + " " + nazwisko
             cell.textLabel?.text = text
         }
+        
         return cell
     }
 }

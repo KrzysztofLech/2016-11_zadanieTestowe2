@@ -12,7 +12,6 @@ protocol DatePickerDelegate {
     func didSelectDate(date: Date)
 }
 
-
 class DatePickerVC: UIViewController {
 
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -20,16 +19,6 @@ class DatePickerVC: UIViewController {
     
     
     @IBAction func readDate(_ sender: UIButton) {
-        
-        /*
-        let formatter = DateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "PL") as Locale!
-        formatter.dateStyle = .short
-        
-        let date = formatter.string(from: datePicker.date)
-        print(date)
-        */
- 
         delegate.didSelectDate(date: datePicker.date)
     }
 }
